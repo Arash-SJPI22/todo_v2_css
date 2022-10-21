@@ -1,0 +1,161 @@
+body {
+    background: linear-gradient(to bottom, white, salmon);    
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    animation: fade-in 0.5s backwards;
+    animation-delay: 0.5s;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0px; 
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: ease-in conatiner-drop-in 0.5s forwards;
+    background-color: white;
+    box-shadow: 0px 0px 10px grey;
+    margin: 10px auto auto auto;
+    padding: 10px 80px;
+}
+
+@keyframes conatiner-drop-in {
+    0%{
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+    50%{
+        margin-top: 50px;
+        opacity: 0.5;
+    }
+
+    100%{
+        margin-top: 0px;
+        opacity: 1;
+    }
+    
+}
+
+#pCounter {
+    animation: fade-in 0.5s backwards;
+    animation-delay: 0.6s;
+    font-size: 12px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#taskInput {
+    align-items: center;
+    animation: fade-in 0.5s backwards;
+    animation-delay: 0.7s;
+    border: 1.5px solid grey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+    padding: 2px;
+}
+
+#taskInput:focus {
+    border: 1.5px solid blue;
+    outline: 0px;
+}
+
+#submitBtn {
+    animation: fade-in 0.5s backwards;
+    animation-delay: 0.8s;
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 0.2rem 0.8rem;
+    font-weight: bold;
+}
+
+#submitBtn:hover {
+    background-color: DarkGray;
+}
+
+#submitBtn:active {
+    background-color: silver;
+}
+
+#pInputVarning {
+    animation: pInputVarningBlink 0.5s linear;
+    animation-iteration-count: 3;
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 0px;
+    opacity: 1;
+    text-align: center;
+}
+
+@keyframes pInputVarningBlink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pInputVarningBlink2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#ulTaskList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    animation: linear li-creation 0.2s;
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
+@keyframes li-creation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+span:hover, .rmvTaskBtn:hover {
+    cursor: pointer;
+}
+
+.rmvTaskBtn {
+    background-color: transparent;
+    border: 0;
+}
+
+.completedTask {
+    color: gray;
+    text-decoration: line-through;
+    transition: color 0.5s;
+}
