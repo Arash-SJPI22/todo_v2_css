@@ -1,9 +1,9 @@
 html {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 body {
-    background: linear-gradient(to bottom, white, salmon);    
+    background: linear-gradient(white, salmon);    
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
 }
